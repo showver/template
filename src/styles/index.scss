@@ -1,0 +1,251 @@
+@import '~element-ui/lib/theme-chalk/index.css';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body,html{
+  // overflow: hidden !important;
+  height: 100vh;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+:focus {
+  outline: unset;
+}
+.page{
+  text-align: right;
+  padding: 15px;
+}
+.file-btn{
+  position: relative;
+}
+.file-type{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.file-name{
+  margin-right: 10px;
+  text-align: right;
+}
+.tree{
+  border: 1px solid #EBEEF5;
+  .tree-btn{
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #EBEEF5;
+  }
+  .el-tree{
+    height: 600px;
+    overflow-y: auto;
+  }
+}
+
+.ant-message {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: fixed;
+  top: 16px;
+  left: 0;
+  z-index: 2010;
+  width: 100%;
+  pointer-events: none;
+}
+.ant-message-notice {
+  padding: 8px;
+  text-align: center;
+}
+.ant-message-notice:first-child {
+  margin-top: -8px;
+}
+.ant-message-notice-content {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: all;
+}
+.ant-message-success .anticon {
+  color: #52c41a;
+}
+.ant-message-error .anticon {
+  color: #f5222d;
+}
+.ant-message-warning .anticon {
+  color: #faad14;
+}
+.ant-message-info .anticon,
+.ant-message-loading .anticon {
+  color: #1890ff;
+}
+.ant-message .anticon {
+  position: relative;
+  top: 1px;
+  margin-right: 8px;
+  font-size: 16px;
+}
+.ant-message-notice.move-up-leave.move-up-leave-active {
+  overflow: hidden;
+  -webkit-animation-name: MessageMoveOut;
+          animation-name: MessageMoveOut;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+@-webkit-keyframes MessageMoveOut {
+  0% {
+    max-height: 150px;
+    padding: 8px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+@keyframes MessageMoveOut {
+  0% {
+    max-height: 150px;
+    padding: 8px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+.tool{
+  .tool-btn{
+    display: inline-block;
+    margin: 3px 0;
+    width: 100%;
+    .el-button{
+      width: 100%;
+    }
+  }
+}
+.popover{
+  margin-right: 6px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.el-dialog {
+  margin-top: 12vh !important;
+  overflow: hidden !important;
+  .el-dialog__body {
+    padding: 20px !important;
+    max-height: 500px !important;
+    min-height: 100px;
+    overflow-y: auto;
+  }
+}
+.el-dialog__wrapper {
+  overflow: hidden !important;
+}
+
+/* 新增编辑公共窗口 */
+  /* 窗口最小宽度 */
+  .addEditModel .el-dialog{
+    min-width: 600px;
+    .el-dialog__body{
+      width: 100%;
+      box-sizing: border-box;
+      max-height: 500px;
+      min-height: 200px;
+      overflow-y: auto;
+      padding-bottom: 10px;
+      // 时间选择器
+      // .el-date-editor.el-input, .el-date-editor.el-input__inner{width: 100%;}
+      .el-form{
+        >div{
+          width: 100%;
+          float: left;
+          box-sizing: border-box;
+          margin-bottom: 22px;
+          // height: 41px;
+          // line-height: 41px;
+          >div{
+            margin-bottom: 0;
+          }
+        }
+        .model-h{height: auto;line-height: normal;}
+        .model-6{width: 60%;}
+        .model-7{width: 70%;}
+        .model-5{width: 50%;}
+        .model-4{width: 40%;}
+        .model-f{
+          display: -webkit-flex; /* Safari */
+          display: flex;
+          .el-form-item__content{
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            >div{margin-right: 10px; flex: 1; -webkit-box-flex: 1; -ms-flex: 1;}
+            >div:last-child{margin-right: 0;}
+           }
+          >div{
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .clearfix:after {
+    content: ""; //设置内容为空
+    height: 0; //高度为0
+    line-height: 0; //行高为0
+    display: block; //将文本转为块级元素
+    clear: both;//清除浮动
+    visibility: hidden; //将元素隐藏
+  }
+  
+  .clearfix {
+    zoom: 1; //为了兼容IE;
+  }
+  .projectName {
+    font-size: 24px;
+font-family: Source Han Sans CN Medium, Source Han Sans CN Medium-Medium;
+font-weight: 500;
+text-align: justifyLeft;
+color: #333333;
+  }
+  // .el-tabs__item {
+  //   height:30px;
+  //   line-height: 30px;
+  // }
+  // .el-tabs__item.is-active {
+  //   background: #6eb1ff;
+  //   color: #fff;
+  // }
+  // .el-dialog__title {
+  //   display: flex;
+  //   align-items:center;
+  //   justify-content: center;
+  // }
+  // .el-dialog {
+  //   border-radius: 3%;
+  // } 

@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = git@www.toncentsoft.com:yuxiaowei/template.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
